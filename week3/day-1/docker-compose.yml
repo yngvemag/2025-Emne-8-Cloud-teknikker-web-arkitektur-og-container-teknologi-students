@@ -1,0 +1,51 @@
+services:
+  web:
+    image: studentblogg-web:latest
+    container_name: studentblogg-web
+    build:
+      dockerfile: Dockerfile
+      context: ./1-Nginx
+    ports:
+      - 80:80
+      - 81:81
+    depends_on:
+      - api
+    networks:
+      - studentblogg-net-compose
+
+  api:
+    image: studentblogg-api:latest
+    container_name: studentblogg-api
+    build:
+      dockerfile: Dockerfile
+      context: ./2-StudentBloggAPI
+    # ports:
+    #   - 8080:8080
+    environment:
+      - ConnectionStrings__DefaultConnection=${DefaultConnection}
+    depends_on:
+      - db
+    networks:
+      - studentblogg-net-compose
+
+  db:
+    image: studentblogg-db:latest
+    container_name: studentblogg-db
+    build:
+      dockerfile: Dockerfile
+      context: ./3-StudentBloggDB
+    volumes:
+      - studentblogg-data-compose:/var/lib/mysql    
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+    # ports:
+    #   - 4444:3306
+    networks:
+      - studentblogg-net-compose
+
+volumes:
+  studentblogg-data-compose:
+
+networks:
+  studentblogg-net-compose:
+    driver: bridge
