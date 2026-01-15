@@ -1,0 +1,25 @@
+# Build Stage
+FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
+
+WORKDIR /src
+
+# Kopier prosjektfil først for cache-vennlig restore
+COPY StudentBloggAPI.csproj ./
+RUN dotnet restore
+
+# Kopier resten av koden og bygg applikasjonen
+COPY . ./
+RUN dotnet publish -c Release -o /app/publish
+
+
+# Runtime Stage
+FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS runtime
+WORKDIR /app
+
+# Appen lytter på port 8080
+EXPOSE 8080
+ENV ASPNETCORE_URLS=http://+:8080
+
+# Kopier den publiserte applikasjonen fra build-stadiet
+COPY --from=build /app/publish .
+ENTRYPOINT ["dotnet", "StudentBloggAPI.dll"]

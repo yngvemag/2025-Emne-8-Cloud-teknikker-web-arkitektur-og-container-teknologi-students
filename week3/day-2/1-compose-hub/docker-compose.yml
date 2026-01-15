@@ -1,6 +1,6 @@
 services:
   web:
-    image: yngvemag/studentblogg-web:latest
+    image: yngvemag/studentblogg-web-hub:latest
     container_name: studentblogg-web
     ports:
       - 80:80
@@ -10,7 +10,7 @@ services:
 
 
   api:
-    image: yngvemag/studentblogg-api:latest
+    image: yngvemag/studentblogg-api-hub:latest
     container_name: studentblogg-api
     # ports:
     #   - 8080:8080
@@ -21,7 +21,7 @@ services:
 
 
   db:
-    image: yngvemag/studentblogg-db:latest
+    image: yngvemag/studentblogg-db-hub:latest
     container_name: studentblogg-db
     volumes:
       - studentblogg-data-compose:/var/lib/mysql    
