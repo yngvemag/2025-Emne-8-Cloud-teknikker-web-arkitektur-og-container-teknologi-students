@@ -1,0 +1,37 @@
+services:
+  web:
+    image: yngvemag/studentblogg-web:latest
+    #container_name: studentblogg-web
+    ports:
+      - 80:80
+      - 81:81
+    depends_on:
+      - api
+
+
+  api:  # -> inn i nginx config for api
+    image: yngvemag/studentblogg-api:latest
+    #container_name: studentblogg-api
+    # ports:
+    #   - 8080:8080
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=db;Database=ga_studentblogg;User ID=ga-app;Password=ga-5ecret-%
+    depends_on:
+      - db
+    deploy:
+      replicas: 5
+
+  db:
+    image: yngvemag/studentblogg-db:latest
+    #container_name: studentblogg-db
+    volumes:
+      - studentblogg-data-compose:/var/lib/mysql    
+    environment:
+      - MYSQL_ROOT_PASSWORD=gokstad
+    # ports:
+    #   - 4444:3306
+
+
+volumes:
+  studentblogg-data-compose:
+
