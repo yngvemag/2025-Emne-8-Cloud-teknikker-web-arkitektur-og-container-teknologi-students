@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "Dn4bkwgckto=",
+  "success": true,
+  "projectFilePath": "C:\\ga\\src\\2025-Emne-8-Cloud-teknikker-web-arkitektur-og-container-teknologi-students\\week5\\day-1\\AWSUploadFileS3API\\AWSUploadFileS3API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\AGSAS4920\\.nuget\\packages\\awssdk.core\\4.0.3.10\\awssdk.core.4.0.3.10.nupkg.sha512",
+    "C:\\Users\\AGSAS4920\\.nuget\\packages\\awssdk.extensions.netcore.setup\\4.0.3.21\\awssdk.extensions.netcore.setup.4.0.3.21.nupkg.sha512",
+    "C:\\Users\\AGSAS4920\\.nuget\\packages\\awssdk.s3\\4.0.17.3\\awssdk.s3.4.0.17.3.nupkg.sha512",
+    "C:\\Users\\AGSAS4920\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.1\\microsoft.aspnetcore.openapi.10.0.1.nupkg.sha512",
+    "C:\\Users\\AGSAS4920\\.nuget\\packages\\microsoft.openapi\\2.0.0\\microsoft.openapi.2.0.0.nupkg.sha512",
+    "C:\\Users\\AGSAS4920\\.nuget\\packages\\scalar.aspnetcore\\2.12.18\\scalar.aspnetcore.2.12.18.nupkg.sha512"
+  ],
+  "logs": []
+}

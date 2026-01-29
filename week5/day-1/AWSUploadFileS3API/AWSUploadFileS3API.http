@@ -1,0 +1,6 @@
+@AWSUploadFileS3API_HostAddress = http://localhost:5123
+
+GET {{AWSUploadFileS3API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

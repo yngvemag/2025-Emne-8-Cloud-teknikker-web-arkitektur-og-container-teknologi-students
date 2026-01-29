@@ -1,0 +1,7 @@
+# Create VPC
+
+![1737021423151](image/5-create-vpc/1737021423151.png)
+![1737022281896](image/5-create-vpc/1737022281896.png)
+![1737022296172](image/5-create-vpc/1737022296172.png)
+![1737022315560](image/5-create-vpc/1737022315560.png)
+![1737022330205](image/5-create-vpc/1737022330205.png)

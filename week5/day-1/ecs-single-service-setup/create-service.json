@@ -1,0 +1,30 @@
+{
+  "serviceName": "studentblogg-service",
+  "cluster": "studentblogg-cluster",
+  "taskDefinition": "studentblogg-task:9",
+  "desiredCount": 1,
+  "launchType": "FARGATE",
+  "networkConfiguration": {
+    "awsvpcConfiguration": {
+      "subnets": ["subnet-05b461e96f9c0f3b5", "subnet-0bceb3ce449bde9cf", "subnet-08219bbfcb3cce530"],
+      "securityGroups": ["sg-05fef84f4ce1db3a1"],
+      "assignPublicIp": "ENABLED"
+    }
+  },
+  "serviceConnectConfiguration": {
+    "enabled": true,
+    "namespace": "arn:aws:servicediscovery:eu-north-1:127214158791:namespace/ns-am6oclvcq73n4amc",
+    "services": [
+      {
+        "portName": "studentblogg-api-8080-tcp",
+        "discoveryName": "studentblogg-api",
+        "clientAliases": [{ "dnsName": "studentblogg-api", "port": 8080 }]
+      },
+      {
+        "portName": "studentblogg-db-3306-tcp",
+        "discoveryName": "studentblogg-db",
+        "clientAliases": [{ "dnsName": "studentblogg-db", "port": 3306 }]
+      }
+    ]
+  }
+}

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StudentBloggAPI.IntegrationTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aefd5ff6b9b63e11690ce67b57addb1ca6484044")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+45667731d2e9da5cb4ea5c1ad82779528f1a5c74")]
 [assembly: System.Reflection.AssemblyProductAttribute("StudentBloggAPI.IntegrationTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StudentBloggAPI.IntegrationTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

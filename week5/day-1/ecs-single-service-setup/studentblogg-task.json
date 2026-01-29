@@ -1,0 +1,129 @@
+{
+    "family": "studentblogg-task",
+    "containerDefinitions": [
+        {
+            "name": "studentblogg-db",
+            "image": "127214158791.dkr.ecr.eu-north-1.amazonaws.com/studentblogg-db:latest",
+            "cpu": 1024,
+            "portMappings": [
+                {
+                    "name": "studentblogg-db-3306-tcp",
+                    "containerPort": 3306,
+                    "hostPort": 3306,
+                    "protocol": "tcp"
+                }
+            ],
+            "essential": true,
+            "environment": [
+                {
+                    "name": "MYSQL_ROOT_PASSWORD",
+                    "value": "gokstad"
+                }
+            ],
+            "environmentFiles": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "ulimits": [],
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "/ecs/studentblogg-task",
+                    "awslogs-create-group": "true",
+                    "awslogs-region": "eu-north-1",
+                    "awslogs-stream-prefix": "ecs"
+                },
+                "secretOptions": []
+            },
+            "systemControls": []
+        },
+        {
+            "name": "studentblogg-api",
+            "image": "127214158791.dkr.ecr.eu-north-1.amazonaws.com/studentblogg-api:latest",
+            "cpu": 0,
+            "portMappings": [
+                {
+                    "name": "studentblogg-api-8080-tcp",
+                    "containerPort": 8080,
+                    "hostPort": 8080,
+                    "protocol": "tcp",
+                    "appProtocol": "http"
+                }
+            ],
+            "essential": true,
+            "environment": [
+                {
+                    "name": "ConnectionStrings__DefaultConnection",
+                    "value": "Server=studentblogg-db;Database=ga_studentblogg;User ID=ga-app;Password=ga-5ecret-%"
+                }
+            ],
+            "environmentFiles": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "dependsOn": [
+                {
+                    "containerName": "studentblogg-db",
+                    "condition": "START"
+                }
+            ],
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "/ecs/studentblogg-task",
+                    "awslogs-create-group": "true",
+                    "awslogs-region": "eu-north-1",
+                    "awslogs-stream-prefix": "ecs"
+                },
+                "secretOptions": []
+            },
+            "systemControls": []
+        },
+        {
+            "name": "studentblogg-web",
+            "image": "127214158791.dkr.ecr.eu-north-1.amazonaws.com/studentblogg-web:latest",
+            "cpu": 0,
+            "portMappings": [
+                {
+                    "name": "studentblogg-web-80-tcp",
+                    "containerPort": 80,
+                    "hostPort": 80,
+                    "protocol": "tcp",
+                    "appProtocol": "http"
+                },
+                {
+                    "name": "studentblogg-web-81-tcp",
+                    "containerPort": 81,
+                    "hostPort": 81,
+                    "protocol": "tcp",
+                    "appProtocol": "http"
+                }
+            ],
+            "essential": true,
+            "environment": [],
+            "environmentFiles": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "dependsOn": [
+                {
+                    "containerName": "studentblogg-api",
+                    "condition": "START"
+                }
+            ],
+            "systemControls": []
+        }
+    ],
+    "taskRoleArn": "arn:aws:iam::127214158791:role/ecsTaskExecutionRole",
+    "executionRoleArn": "arn:aws:iam::127214158791:role/ecsTaskExecutionRole",
+    "networkMode": "awsvpc",
+    "volumes": [],
+    "placementConstraints": [],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "1024",
+    "memory": "3072",
+    "runtimePlatform": {
+        "cpuArchitecture": "X86_64",
+        "operatingSystemFamily": "LINUX"
+    },
+    "enableFaultInjection": false
+}
