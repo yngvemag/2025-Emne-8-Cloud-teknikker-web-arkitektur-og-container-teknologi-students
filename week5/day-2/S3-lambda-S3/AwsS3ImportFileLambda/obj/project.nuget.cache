@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "6Y4cQnNS5vQ=",
+  "success": true,
+  "projectFilePath": "C:\\ga\\src\\2025-Emne-8-Cloud-teknikker-web-arkitektur-og-container-teknologi-students\\week5\\day-2\\S3-lambda-S3\\AwsS3ImportFileLambda\\AwsS3ImportFileLambda.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\AGSAS4920\\.nuget\\packages\\amazon.lambda.core\\2.8.0\\amazon.lambda.core.2.8.0.nupkg.sha512",
+    "C:\\Users\\AGSAS4920\\.nuget\\packages\\amazon.lambda.s3events\\3.1.0\\amazon.lambda.s3events.3.1.0.nupkg.sha512",
+    "C:\\Users\\AGSAS4920\\.nuget\\packages\\amazon.lambda.serialization.systemtextjson\\2.4.4\\amazon.lambda.serialization.systemtextjson.2.4.4.nupkg.sha512",
+    "C:\\Users\\AGSAS4920\\.nuget\\packages\\awssdk.core\\4.0.3.6\\awssdk.core.4.0.3.6.nupkg.sha512",
+    "C:\\Users\\AGSAS4920\\.nuget\\packages\\awssdk.s3\\4.0.14.3\\awssdk.s3.4.0.14.3.nupkg.sha512",
+    "C:\\Users\\AGSAS4920\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.22\\microsoft.netcore.app.ref.8.0.22.nupkg.sha512",
+    "C:\\Users\\AGSAS4920\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.22\\microsoft.windowsdesktop.app.ref.8.0.22.nupkg.sha512",
+    "C:\\Users\\AGSAS4920\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.22\\microsoft.aspnetcore.app.ref.8.0.22.nupkg.sha512",
+    "C:\\Users\\AGSAS4920\\.nuget\\packages\\microsoft.netcore.app.crossgen2.win-x64\\8.0.22\\microsoft.netcore.app.crossgen2.win-x64.8.0.22.nupkg.sha512"
+  ],
+  "logs": []
+}
