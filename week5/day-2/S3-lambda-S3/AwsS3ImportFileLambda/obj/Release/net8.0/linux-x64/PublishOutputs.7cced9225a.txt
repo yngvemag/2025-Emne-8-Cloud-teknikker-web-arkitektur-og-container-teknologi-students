@@ -1,0 +1,9 @@
+C:\ga\src\2025-Emne-8-Cloud-teknikker-web-arkitektur-og-container-teknologi-students\week5\day-2\S3-lambda-S3\AwsS3ImportFileLambda\bin\Release\net8.0\publish\AwsS3ImportFileLambda.deps.json
+C:\ga\src\2025-Emne-8-Cloud-teknikker-web-arkitektur-og-container-teknologi-students\week5\day-2\S3-lambda-S3\AwsS3ImportFileLambda\bin\Release\net8.0\publish\AwsS3ImportFileLambda.runtimeconfig.json
+C:\ga\src\2025-Emne-8-Cloud-teknikker-web-arkitektur-og-container-teknologi-students\week5\day-2\S3-lambda-S3\AwsS3ImportFileLambda\bin\Release\net8.0\publish\AwsS3ImportFileLambda.pdb
+C:\ga\src\2025-Emne-8-Cloud-teknikker-web-arkitektur-og-container-teknologi-students\week5\day-2\S3-lambda-S3\AwsS3ImportFileLambda\bin\Release\net8.0\publish\Amazon.Lambda.Core.dll
+C:\ga\src\2025-Emne-8-Cloud-teknikker-web-arkitektur-og-container-teknologi-students\week5\day-2\S3-lambda-S3\AwsS3ImportFileLambda\bin\Release\net8.0\publish\Amazon.Lambda.S3Events.dll
+C:\ga\src\2025-Emne-8-Cloud-teknikker-web-arkitektur-og-container-teknologi-students\week5\day-2\S3-lambda-S3\AwsS3ImportFileLambda\bin\Release\net8.0\publish\Amazon.Lambda.Serialization.SystemTextJson.dll
+C:\ga\src\2025-Emne-8-Cloud-teknikker-web-arkitektur-og-container-teknologi-students\week5\day-2\S3-lambda-S3\AwsS3ImportFileLambda\bin\Release\net8.0\publish\AWSSDK.Core.dll
+C:\ga\src\2025-Emne-8-Cloud-teknikker-web-arkitektur-og-container-teknologi-students\week5\day-2\S3-lambda-S3\AwsS3ImportFileLambda\bin\Release\net8.0\publish\AWSSDK.S3.dll
+C:\ga\src\2025-Emne-8-Cloud-teknikker-web-arkitektur-og-container-teknologi-students\week5\day-2\S3-lambda-S3\AwsS3ImportFileLambda\bin\Release\net8.0\publish\AwsS3ImportFileLambda.dll

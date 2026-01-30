@@ -1,0 +1,22 @@
+services:
+  web:
+    image: yngvemag/studentblogg-web-hub:latest
+    container_name: studentblogg-web
+    ports:
+      - 80:80
+      - 81:81
+    depends_on:
+      - api
+
+
+  api:
+    image: yngvemag/studentblogg-api-hub:latest
+    container_name: studentblogg-api
+    # ports:
+    #   - 8080:8080
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=studentblogg-db.cvi2wkosmv1y.eu-north-1.rds.amazonaws.com;Port=3306;Database=ga_studentblogg;User ID=ga-app;Password=ga-5ecret-%
+
+volumes:
+  studentblogg-data-compose:
+
