@@ -19,3 +19,5 @@
      - S3
      - RDS
      - Lambda, trigger
+
+![1770286140044](image/repetisjon/1770286140044.png)
